@@ -130,8 +130,8 @@
     ital_word: ital_word {
         compatible = "zmk,behavior-caps-word";
         #binding-cells = <0>;
+        continue-list = <UNDERSCORE BACKSPACE DELETE>;
     };
-
 
     keymap {
         compatible = "zmk,keymap";
