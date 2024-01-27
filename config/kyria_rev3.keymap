@@ -1,54 +1,189 @@
 /*
- * Copyright (c) 2023 The ZMK Contributors
+ * Copyright (c) 2020 The ZMK Contributors
  *
  * SPDX-License-Identifier: MIT
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
 
-/* Uncomment this block if using RGB
-&led_strip {
-    chain-length = <6>;
-    // chain-length = <31>; // Uncomment if using both per-key and underglow LEDs
-    // chain-length = <25>; // Uncomment if using only per-key LEDs.
+#define BASE 0
+#define RAISE 1
+#define LOWER 2
+#define ADJUST 3
+#define EXCEL 4
+#define SLIP 5
+
+&mt {
+    tapping-term-ms = <200>;
 };
- */
 
 / {
+    behaviors {
+        td_mtls: tap_dance_triple_brackets_left {
+            compatible = "zmk,behavior-tap-dance";
+            label = "tap_dance_triple_brackets_left";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LPAR>, <&kp LBKT>, <&kp LBRC>;
+        };
+        
+        td_mtrs: tap_dance_triple_brackets_right {
+            compatible = "zmk,behavior-tap-dance";
+            label = "tap_dance_triple_brackets_right";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp RPAR>, <&kp RBKT>, <&kp RBRC>;
+        };
+        
+        td_minund: tap_dance_minus_underscore {
+            compatible = "zmk,behavior-tap-dance";
+            label = "tap_dance_minus_underscore";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp MINUS>, <&kp UNDER>;
+        };
+
+        pht: positional_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "POSITIONAL_HOLD_TAP";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <13>;
+        };
+    };
+
+    macros {
+        slippw: slippw {
+            label = "SLIPPW";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <5>;
+            tap-ms = <5>;
+            bindings
+                = <&macro_tap &kp D &kp Y &kp W &kp LS(T) &kp M &kp L &kp M &kp LS(F)>
+                ; 
+        };
+
+        msdunm: msdunm {
+            label = "MSDUSERNAME";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <5>;
+            tap-ms = <5>;
+            bindings
+                = <&macro_tap &kp R &kp B &kp R &kp O &kp W &kp N0 &kp N4 &kp N6 &kp TAB>
+                ; 
+        };
+
+        pwcunm: pwcu {
+            label = "PWCUSERNAME";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <5>;
+            tap-ms = <5>;
+            bindings
+                = <&macro_tap &kp R &kp Y &kp A &kp N &kp DOT &kp S &kp DOT &kp B &kp R &kp O &kp W &kp N &kp AT &kp P &kp W &kp C &kp DOT &kp C &kp O &kp M>
+                ; 
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+            combo_leftbrackets {
+            timeout-ms = <20>;
+            key-positions = <13 14>;
+            bindings = <&td_mtls>;
+        };
+
+            combo_rightbrackets {
+            timeout-ms = <20>;
+            key-positions = <21 22>;
+            bindings = <&td_mtrs>;
+        };
+
+            combo_excellayer {
+            timeout-ms = <20>;
+            key-positions = <14 15>;
+            bindings = <&mo EXCEL>;
+        };  
+
+            combo_sliplayer {
+            timeout-ms = <20>;
+            key-positions = <19 21>;
+            layers = <4>;
+            bindings = <&mo SLIP>;
+        };  
+
+            combo_LGUI {
+            timeout-ms = <20>;
+            key-positions = <48 49>;
+            bindings = <&kp LGUI>;
+        };  
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
-            // ---------------------------------------------------------------------------------------------------------------------------------
-            // |  ESC  |  Q  |  W  |  E   |  R   |  T   |                                          |  Y   |  U    |  I    |  O   |   P   |   \  |
-            // |  TAB  |  A  |  S  |  D   |  F   |  G   |                                          |  H   |  J    |  K    |  L   |   ;   |   '  |
-            // | SHIFT |  Z  |  X  |  C   |  V   |  B   | L SHIFT | L SHIFT |  | LAYER 1 | L SHIFT |  N   |  M    |  ,    |  .   |   /   | CTRL |
-            //                     | GUI  | DEL  | RET  |  SPACE  |   ESC   |  |   RET   |  SPACE  | TAB  | BSPC  | R-ALT |
             bindings = <
-            &kp ESC   &kp Q &kp W &kp E &kp R &kp T                                                  &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSLH
-            &kp TAB   &kp A &kp S &kp D &kp F &kp G                                                  &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-            &kp LSHFT &kp Z &kp X &kp C &kp V &kp B &kp LSHFT &kp LSHFT            &mo 1   &kp LSHFT &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RCTRL
-                                  &kp LGUI &kp DEL &kp RET &kp SPACE &kp ESC       &kp RET &kp SPACE &kp TAB &kp BSPC &kp RALT
+                &kp TAB &kp Q &kp W &kp F &pht LC(P) P &pht LC(B) B                                                &pht LC(J) J &pht LC(L) L  &pht LC(U) U     &pht LC(Y) Y   &kp SEMI    &kp ESC
+                &caps_word &pht LC(A) A &pht LC(R) R &pht LC(S) S &pht LC(T) T &kp G                                        &kp M &kp N &kp E     &pht LC(I) I   &kp O &kp SQT
+                &kp LSHFT &pht LC(Z) Z &pht LC(X) X &pht LC(C) C &pht LC(D) D &pht LC(V) V &kp BSPC &kp LC(LA(DEL))        &kp PLUS &kp EQUAL &pht LC(K) K &kp H  &kp COMMA &kp DOT &kp FSLH &kp RSHFT
+                            &kp LG(L) &kp LALT &mo LOWER &kp LC(BSPC) &kp LCTRL        &kp ENTER &kp SPACE &mo RAISE &kp LC(PG_UP) &kp LC(PG_DN)
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
-        function_layer {
-            // ---------------------------------------------------------------------------------------------------------------------------------
-            // |       |      |BT_CLR|BTSEL0|BTSEL1|BTSEL2|                                         |      |      |      |      |      |      |
-            // |       |      |      |BTSEL3|BTSEL4|      |                                         |      |      |      |      |      |      |
-            // |       |      |      |      |      |      |      |      |      |      |      |      |      |      |      |      |      |      |
-            //                       |      |      |      |      |      |      |      |      |      |      |      |      |
+        
+        RAISE_layer {
             bindings = <
-            &trans &trans &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2              &trans &trans &trans &trans &trans &trans
-            &trans &trans &trans     &bt BT_SEL 3 &bt BT_SEL 4 &trans                    &trans &trans &trans &trans &trans &trans
-            &trans &trans &trans &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans &trans &trans &trans
-                                 &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans &trans                              &kp PG_UP &kp N7 &kp N8 &kp N9 &kp N0 &trans
+                &trans &kp N1 &kp N2 &kp N3 &kp N4 &kp N5                             &kp HOME &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp END
+                &trans &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &trans &trans                       &trans &trans &trans &td_minund &kp N2 &kp N3 &kp EQUAL &trans
+                            &trans  &trans   &mo ADJUST        &trans &trans                       &trans &trans    &trans    &kp HOME     &kp END
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+        };
+
+        LOWER_layer {
+            bindings = <
+                &trans &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT                              &kp CARET &kp AMPS &kp ASTRK &trans &trans &trans
+                &kp DEL &kp F2 &kp F4 &kp F5 &kp F12 &trans                                     &trans &trans &trans &trans &trans &trans
+                &trans &out OUT_TOG &bt BT_NXT &kp PG_DN &kp PG_UP &trans &trans &trans  &trans &trans &trans &trans &trans &trans &trans &trans
+                            &trans  &trans   &trans        &trans &trans  &trans &trans    &mo ADJUST    &trans    &trans
+            >;
+
+        };
+
+        ADJUST_layer {
+            bindings = <
+                &out OUT_TOG &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_NXT &bt BT_CLR                              &kp PG_UP &kp N7 &kp N8 &kp N9 &kp N0 &trans
+                &trans &kp N1 &kp N2 &kp N3 &kp N4 &kp Q                             &kp LC(LS(LEFT)) &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp LC(LS(RIGHT))
+                &trans &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &trans &trans                       &trans &trans &trans &kp MINUS &kp N2 &kp N3 &kp EQUAL &trans
+                            &trans  &trans   &trans        &kp LGUI &trans                       &trans &trans    &trans    &kp HOME     &kp END
+            >;
+        };
+
+        EXCEL_layer {
+            bindings = <
+                &trans &trans &trans &trans &trans &trans                              &kp TAB &kp N7 &kp N8 &kp N9 &kp ASTRK &kp ESC
+                &trans &trans &trans &trans &trans &trans                             &kp PLUS &kp N4 &kp N5 &kp N6 &kp DOT &kp SQT
+                &kp LPAR &trans &trans &trans &trans &trans &trans &trans                       &trans &trans &kp MINUS &kp N1 &kp N2 &kp N3 &kp FSLH &kp RPAR
+                            &trans  &trans   &trans        &trans &trans                       &kp ENTER &kp SPACE    &kp N0    &kp EQUAL     &trans
+            >;
+        };
+
+        SLIP_layer {
+            bindings = <
+                &trans &trans &trans &trans &trans &trans                              &trans &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans &trans                             &trans &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans &trans &trans &trans                       &trans &trans &trans &trans &trans &trans &trans &trans
+                            &trans  &trans   &trans        &trans &trans                       &msdunm &slippw    &pwcunm    &trans     &trans
+            >;
         };
     };
 };
