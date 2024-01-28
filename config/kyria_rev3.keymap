@@ -120,6 +120,12 @@
             bindings = <&mo SLIP>;
         };  
 
+            combo_italics {
+            timeout-ms = <20>;
+            key-positions = <9 21>;
+            bindings = <&kp LC(I)>;
+        };  
+
             combo_LGUI {
             timeout-ms = <20>;
             key-positions = <48 49>;
