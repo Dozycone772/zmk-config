@@ -47,7 +47,6 @@
             bindings = <&kp MINUS>, <&kp UNDER>;
         };
 
-
         td_stcp: tap_dance_shift_caps {
             compatible = "zmk,behavior-tap-dance";
             label = "tap_dance_shift_caps";
@@ -131,7 +130,7 @@
 
             combo_italics {
             timeout-ms = <200>;
-            key-positions = <9 21>;
+            key-positions = <21 37>;
             bindings = <&kp LC(I)>;
         };  
 
@@ -139,6 +138,54 @@
             timeout-ms = <200>;
             key-positions = <15 43>;
             bindings = <&kp BSPC>;
+        };  
+
+            combo_excl {
+            timeout-ms = <200>;
+            key-positions = <1 13>;
+            bindings = <&kp EXCL>;
+        };  
+
+            combo_atsym {
+            timeout-ms = <200>;
+            key-positions = <2 14>;
+            bindings = <&kp AT>;
+        };  
+
+            combo_hash {
+            timeout-ms = <200>;
+            key-positions = <3 15>;
+            bindings = <&kp HASH>;
+        };  
+
+            combo_dollar {
+            timeout-ms = <200>;
+            key-positions = <4 16>;
+            bindings = <&kp DLLR>;
+        };  
+
+            combo_prcnt {
+            timeout-ms = <200>;
+            key-positions = <5 17>;
+            bindings = <&kp PRCNT>;
+        };  
+
+            combo_raise {
+            timeout-ms = <200>;
+            key-positions = <6 18>;
+            bindings = <&kp CARET>;
+        };  
+
+            combo_ampsd {
+            timeout-ms = <200>;
+            key-positions = <7 19>;
+            bindings = <&kp AMPS>;
+        };  
+
+            combo_astx {
+            timeout-ms = <200>;
+            key-positions = <8 20>;
+            bindings = <&kp ASTRK>;
         };  
 
             combo_LGUI {
