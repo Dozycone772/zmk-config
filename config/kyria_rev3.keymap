@@ -128,12 +128,6 @@
             bindings = <&mo SLIP>;
         };  
 
-            combo_italics {
-            timeout-ms = <200>;
-            key-positions = <21 37>;
-            bindings = <&kp LC(I)>;
-        };  
-
             combo_BSPC {
             timeout-ms = <200>;
             key-positions = <15 43>;
