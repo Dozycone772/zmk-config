@@ -120,6 +120,20 @@
             key-positions = <14 15>;
             bindings = <&mo EXCEL>;
         };  
+        
+            combo_resetleft {
+            timeout-ms = <20>;
+            key-positions = <0 1>;
+            layers = <2>;
+            bindings = <&bootloader>;
+        };  
+        
+            combo_resetright {
+            timeout-ms = <20>;
+            key-positions = <10 11>;
+            layers = <1>;
+            bindings = <&bootloader>;
+        };  
 
             combo_sliplayer {
             timeout-ms = <20>;
