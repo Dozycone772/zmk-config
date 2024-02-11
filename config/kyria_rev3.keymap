@@ -209,8 +209,8 @@
         default_layer {
             bindings = <
                 &kp TAB &kp Q &pht LC(W) W &pht LC(F) F &pht LC(P) P &pht LC(B) B                                                &pht LC(J) J &pht LC(L) L  &pht LC(U) U     &pht LC(Y) Y   &pht LS(SEMI) SEMI    &kp ESC
-                &none &pht LC(A) A &pht LC(R) R &pht LC(S) S &pht LC(T) T &kp G                                        &kp M &kp N &kp E     &pht LC(I) I   &pht LC(O) O &pht LS(SQT) SQT
-                &td_stcp &pht LC(Z) Z &pht LC(X) X &pht LC(C) C &pht LC(D) D &pht LC(V) V &none &pht LG(L) LC(LA(DEL))        &kp PLUS &kp EQUAL &pht LC(K) K &kp H  &pht LS(COMMA) COMMA &pht LS(DOT) DOT &pht LS(FSLH) FSLH &td_stcp
+                &none &pht LC(A) A &pht LC(R) R &pht LC(S) S &pht LC(T) T &kp G                                                 &kp M &kp N &kp E     &pht LC(I) I   &pht LC(O) O &pht LS(SQT) SQT
+                &td_stcp &pht LC(Z) Z &pht LC(X) X &pht LC(C) C &pht LC(D) D &pht LC(V) V &none &pht LC(LA(DEL)) LG(L)        &kp PLUS &kp EQUAL &pht LC(K) K &kp H  &pht LS(COMMA) COMMA &pht LS(DOT) DOT &pht LS(FSLH) FSLH &td_stcp
                             &kp LG(L) &kp LALT &mo LOWER &kp LC(BSPC) &kp LCTRL        &kp ENTER &kp SPACE &mo RAISE &kp LC(PG_UP) &kp LC(PG_DN)
             >;
 
