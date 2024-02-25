@@ -101,7 +101,7 @@
         };
     };
 
-    combos {
+    combos {            
         compatible = "zmk,combos";
             combo_excellayer {
             timeout-ms = <20>;
@@ -183,7 +183,7 @@
         default_layer {
             bindings = <
                 &kp TAB &kp Q &pht LC(W) W &pht LC(F) F &pht LC(P) P &pht LC(B) B                                                &pht LC(J) J &pht LC(L) L  &pht LC(U) U     &pht LC(Y) Y   &pht LS(SEMI) SEMI    &kp ESC
-                &none &pht LC(A) A &pht LC(R) R &pht LSHFT S &pht LCTRL T &kp G                                                 &kp M &kp N &kp E     &pht LC(I) I   &pht LC(O) O &pht LS(SQT) SQT
+                &none &pht LC(A) A &pht LC(R) R &pht LSHFT S &pht LCTRL T &kp G                                                 &kp M &pht LC(N) N &pht LC(E) E  &pht LC(I) I   &pht LC(O) O &pht LS(SQT) SQT
                 &td_stcp &pht LC(Z) Z &pht LC(X) X &pht LC(C) C &pht LC(D) D &pht LC(V) V &none &pht LC(LA(DEL)) LG(L)        &kp PLUS &kp EQUAL &pht LC(K) K &kp H  &pht LS(COMMA) COMMA &pht LS(DOT) DOT &pht LS(FSLH) FSLH &td_stcp
                             &kp LG(L) &kp LALT &mo LOWER &kp LC(BSPC) &kp LCTRL        &kp ENTER &kp SPACE &mo RAISE &kp LC(PG_UP) &kp LC(PG_DN)
             >;
@@ -202,23 +202,18 @@
 
         LOWER_layer {
             bindings = <
-                &bt BT_CLR &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT                              &kp CARET &kp AMPS &kp ASTRK &trans &trans &trans
-                &none &kp F2 &kp F4 &mkp MB2 &mkp MB1 &kp F5                                  &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &trans
-                &trans &out OUT_TOG &bt BT_NXT &kp PG_DN &kp PG_UP &kp F12 &trans &trans  &trans &trans &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &trans
+                &bt BT_CLR &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT                              &kp PLUS &kp N7 &kp N8 &kp N9 &trans &trans
+                &none &kp F2 &kp F4 &mkp MB2 &mkp MB1 &kp F5                                  &kp EQUAL &kp N4 &kp N5 &kp N6 &DOT &trans
+                &trans &out OUT_TOG &bt BT_NXT &kp PG_DN &kp PG_UP &kp F12 &trans &trans  &trans &trans &kp MINUS &kp N1 &kp N2 &kp N3 &kp FSLH &kp ASTRK
                             &trans  &trans   &trans        &trans &trans  &trans &trans    &mo ADJUST    &trans    &trans
             >;
 
         };
 
-        /*
-         * Adjust layer below is a placeholder. Layer still exists, it just can't be reached from keypresses (no combination of keypresses will get you to this layer). 
-         * Can be deleted, but will need to change the numbering of other layers in the code. Use for a new layer when you need one.
-         */   
-
         ADJUST_layer {
             bindings = <
                 &out OUT_TOG &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_NXT &bt BT_CLR                              &kp PG_UP &kp N7 &kp N8 &kp N9 &kp N0 &trans
-                &trans &kp N1 &kp N2 &kp N3 &kp N4 &kp Q                             &kp LC(LS(LEFT)) &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp LC(LS(RIGHT))
+                &trans &kp N1 &kp N2 &kp N3 &kp N4 &kp Q                                      &kp LC(LS(LEFT)) &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp LC(LS(RIGHT))
                 &trans &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &trans &trans                       &trans &trans &trans &kp MINUS &kp N2 &kp N3 &kp EQUAL &trans
                             &trans  &trans   &trans        &kp LGUI &trans                       &trans &trans    &trans    &kp HOME     &kp END
             >;
