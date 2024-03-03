@@ -21,6 +21,10 @@
     tapping-term-ms = <200>;
 };
 
+&sensors {
+    triggers-per-rotation = <30>;
+};
+
 / {
     behaviors {
         left_encoder_test: left_encoder_test {
