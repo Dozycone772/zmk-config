@@ -23,6 +23,18 @@
 
 / {
     behaviors {
+        left_encoder_test: left_encoder_test {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp A>, <&kp B>;
+        };
+
+        right_encoder_test: right_encoder_test {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp C>, <&kp D>;
+        };
+
         td_mtls: tap_dance_triple_brackets_left {
             compatible = "zmk,behavior-tap-dance";
             label = "tap_dance_triple_brackets_left";
@@ -187,6 +199,9 @@
                 &td_stcp &pht LC(Z) Z &pht LC(X) X &pht LC(C) C &pht LC(D) D &pht LC(V) V &none &pht LC(LA(DEL)) LG(L)        &kp PLUS &kp EQUAL &pht LC(K) K &kp H  &pht LS(COMMA) COMMA &pht LS(DOT) DOT &pht LS(FSLH) FSLH &td_stcp
                             &kp A &kp LALT &mo LOWER &kp LC(BSPC) &kp LCTRL        &kp ENTER &kp SPACE &mo RAISE &kp LC(PG_UP) &kp LC(PG_DN)
             >;
+
+            sensor-bindings = <&left_encoder_test &right_encoder_test>;
+
 
         };
         
