@@ -30,7 +30,7 @@
         left_encoder_test: left_encoder_test {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
-            bindings = <&kp PG_DN>, <&kp PG_UP>;
+            bindings = <&kp A>, <&kp B>;
         };
 
         right_encoder_test: right_encoder_test {
