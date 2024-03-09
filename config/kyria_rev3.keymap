@@ -27,13 +27,13 @@
 
 / {
     behaviors {
-        left_encoder: left_encoder {
+        left_encoder_rotate: left_encoder_rotate {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&kp LC(PG_DN)>, <&kp LC(PG_UP)>;
         };
 
-        right_encoder: right_encoder {
+        right_encoder_rotate: right_encoder_rotate {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&bt BT_NXT>, <&bt BT_PRV>;
@@ -200,11 +200,11 @@
             bindings = <
                 &kp TAB &kp Q &pht LC(W) W &pht LC(F) F &pht LC(P) P &pht LC(B) B                                                &pht LC(J) J &pht LC(L) L  &pht LC(U) U     &pht LC(Y) Y   &pht LS(SEMI) SEMI    &kp ESC
                 &mo RAISE &pht LC(A) A &pht LC(R) R &pht LSHFT S &pht LCTRL T &kp G                                                 &kp M &pht LC(N) N &pht LC(E) E  &pht LC(I) I   &pht LC(O) O &pht LS(SQT) SQT
-                &td_stcp &pht LC(Z) Z &pht LC(X) X &pht LC(C) C &pht LC(D) D &pht LC(V) V &none &pht LC(LA(DEL)) LG(L)        &kp PLUS &kp EQUAL &pht LC(K) K &kp H  &pht LS(COMMA) COMMA &pht LS(DOT) DOT &pht LS(FSLH) FSLH &td_stcp
+                &td_stcp &pht LC(Z) Z &pht LC(X) X &pht LC(C) C &pht LC(D) D &pht LC(V) V &kp LC(LS(N3)) &pht LC(LA(DEL)) LG(L)        &kp PLUS &kp EQUAL &pht LC(K) K &kp H  &pht LS(COMMA) COMMA &pht LS(DOT) DOT &pht LS(FSLH) FSLH &td_stcp
                             &kp A &kp LALT &mo LOWER &kp LC(BSPC) &kp LCTRL        &kp ENTER &kp SPACE &mo RAISE &kp LC(PG_UP) &out OUT_TOG
             >;
 
-            sensor-bindings = <&left_encoder &right_encoder>;
+            sensor-bindings = <&left_encoder_rotate &right_encoder_rotate>;
 
 
         };
