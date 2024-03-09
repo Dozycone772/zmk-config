@@ -22,8 +22,15 @@
 };
 
 &sensors {
-    triggers-per-rotation = <36>;
+    left_config {
+        triggers-per-rotation = <36>;
+    };
+
+    right_config {
+        triggers-per-rotation = <30>;
+    };
 };
+
 
 / {
     behaviors {
