@@ -130,73 +130,84 @@
             combo_excellayer {
             timeout-ms = <20>;
             key-positions = <14 15>;
+            layers = <0 1 2 3 4 5>;
             bindings = <&mo EXCEL>;
         };  
 
             combo_sliplayer {
             timeout-ms = <20>;
             key-positions = <19 21>;
-            layers = <4>;
+            layers = <0 1 2 3 4 5>;
             bindings = <&mo SLIP>;
         };  
 
             combo_BSPC {
             timeout-ms = <200>;
             key-positions = <15 43>;
+            layers = <0 1 2 3 4 5>;
             bindings = <&kp BSPC>;
         };  
 
             combo_excl {
             timeout-ms = <200>;
             key-positions = <1 13>;
+            layers = <0 1 2 3 4 5>;
             bindings = <&kp EXCL>;
         };  
 
             combo_atsym {
             timeout-ms = <200>;
             key-positions = <2 14>;
+            layers = <0 1 2 3 4 5>;
             bindings = <&kp AT>;
         };  
 
             combo_hash {
             timeout-ms = <200>;
             key-positions = <3 15>;
+            layers = <0 1 2 3 4 5>;
             bindings = <&kp HASH>;
         };  
 
             combo_dollar {
             timeout-ms = <200>;
             key-positions = <4 16>;
+            layers = <0 1 2 3 4 5>;
             bindings = <&kp DLLR>;
         };  
 
             combo_prcnt {
             timeout-ms = <200>;
             key-positions = <5 17>;
+            layers = <0 1 2 3 4 5>;
             bindings = <&kp PRCNT>;
         };  
 
             combo_raise {
             timeout-ms = <200>;
             key-positions = <6 18>;
+            layers = <0 1 2 3 4 5>;
             bindings = <&kp CARET>;
         };  
 
             combo_ampsd {
             timeout-ms = <200>;
             key-positions = <7 19>;
+            layers = <0 1 2 3 4 5>;
             bindings = <&kp AMPS>;
         };  
 
             combo_astx {
             timeout-ms = <200>;
             key-positions = <8 20>;
+            layers = <0 1 2 3 4 5>;
             bindings = <&kp ASTRK>;
         };  
 
             combo_LGUI {
             timeout-ms = <20>;
             key-positions = <48 49>;
+            layers = <0 1 2 3 4 5>;
             bindings = <&kp LGUI>;
         };  
     };
