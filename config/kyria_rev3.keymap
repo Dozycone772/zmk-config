@@ -266,10 +266,10 @@
 
         STENO_layer {
             bindings = <
-                &trans          &kp HASH        &kp T           &kp P           &kp H           &trans                                                                                      &kp ASTRK       &kp F           &kp P                   &kp L               &kp T               &kp D 
-                &tog STENO      &kp S           &kp K           &kp W           &kp R           &trans                                                                                      &kp ASTRK       &kp R           &kp B                   &kp G               &kp S               &kp Z
-                &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans                              &trans      &trans      &trans          &trans          &trans                  &trans              &trans              &trans
-                                                                &trans          &trans          &kp A           &kp O           &trans                              &trans      &kp E       &kp U           &trans          &trans
+                &none           &kp HASH        &kp T           &kp P           &kp H           &none                                                                                       &kp ASTRK       &kp F           &kp P                   &kp L               &kp T               &kp D 
+                &tog STENO      &kp S           &kp K           &kp W           &kp R           &none                                                                                       &kp ASTRK       &kp R           &kp B                   &kp G               &kp S               &kp Z
+                &none           &none           &none           &none           &none           &none           &none           &none                               &none       &none       &none           &none           &none                   &none               &none               &none
+                                                                &none           &none           &kp A           &kp O           &none                               &none       &kp E       &kp U           &none           &none
             >;
         };
     };
