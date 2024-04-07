@@ -266,10 +266,10 @@
 
         STENO_layer {
             bindings = <
-                &none           &kp HASH        &kp T           &kp P           &kp H           &none                                                                                       &kp ASTRK       &kp F           &kp P                   &kp L               &kp T               &kp D 
-                &tog STENO      &kp S           &kp K           &kp W           &kp R           &none                                                                                       &kp ASTRK       &kp R           &kp B                   &kp G               &kp S               &kp Z
-                &none           &none           &none           &none           &none           &none           &none           &none                               &none       &none       &none           &none           &none                   &none               &none               &none
-                                                                &none           &none           &kp A           &kp O           &none                               &none       &kp E       &kp U           &none           &none
+                &none           &kp Q           &kp W           &kp E           &kp R           &none                                                                                       &kp Y           &kp U           &kp I                   &kp O               &kp P            &kp LBKT 
+                &tog STENO      &kp A           &kp S           &kp D           &kp F           &none                                                                                       &kp H           &kp J           &kp K                   &kp L               &kp SEMI         &kp SQT
+                &none           &none           &none           &none           &none           &none           &none           &none                               &none       &none       &none           &none           &none                   &none               &none            &none
+                                                                &none           &none           &kp C           &kp V           &none                               &none       &kp N       &kp M           &none           &none
             >;
         };
     };
