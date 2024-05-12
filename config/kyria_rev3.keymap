@@ -206,7 +206,7 @@
 
             combo_LGUI {
             timeout-ms = <20>;
-            key-positions = <48 49>;
+            key-positions = <44 45>;
             layers = <0 1 2 3 4 5>;
             bindings = <&kp LGUI>;
         };  
