@@ -70,14 +70,6 @@
             bindings = <&kp MINUS>, <&kp UNDER>;
         };
 
-        td_stcp: tap_dance_shift_caps {
-            compatible = "zmk,behavior-tap-dance";
-            label = "tap_dance_shift_caps";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp LSHFT>, <&caps_word>;
-        };
-
         pht: positional_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -94,6 +86,7 @@
             require-prior-idle-ms = <125>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 32 33 34 35 36 37 38 39 45 46 47 48 49>;
+            hold-trigger-on-release;
         };
 
         rh_hrm: right_positional_hold_tap {
@@ -104,6 +97,7 @@
             require-prior-idle-ms = <125>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 30 31 40 41 42 43 44>;
+            hold-trigger-on-release;
         };
     };
 
@@ -235,8 +229,8 @@
         default_layer {
             bindings = <
                 &kp TAB         &kp Q               &pht LC(W) W        &pht LC(F) F        &pht LC(P) P        &pht LC(B) B                                                                                &pht LC(J) J    &pht LC(L) L     &pht LC(U) U           &pht LC(Y) Y        &pht LS(SEMI) SEMI  &kp ESC
-                &none           &lh_hrm LGUI A      &lh_hrm LALT R      &lh_hrm LCTRL S     &lh_hrm LSHFT T     &pht LC(G) G                                                                                       &kp M    &rh_hrm RSHFT N  &rh_hrm RCTRL E        &rh_hrm RALT I      &rh_hrm RGUI O      &pht LS(SQT) SQT
-                &td_stcp        &pht LC(Z) Z        &pht LC(X) X        &pht LC(C) C        &pht LC(D) D        &pht LC(V) V    &kp LC(LS(N3))  &pht LC(LA(DEL)) LG(L)              &kp PLUS    &kp EQUAL   &pht LC(K) K    &kp H            &pht LS(COMMA) COMMA   &pht LS(DOT) DOT    &pht LS(FSLH) FSLH  &td_stcp
+                &caps_word      &pht LC(A) A        &lh_hrm LALT R      &lh_hrm LCTRL S     &lh_hrm LSHFT T     &pht LC(G) G                                                                                       &kp M    &rh_hrm RSHFT N  &rh_hrm RCTRL E        &pht LC(I) I        &pht LC(O) O        &pht LS(SQT) SQT
+                &none           &pht LC(Z) Z        &pht LC(X) X        &pht LC(C) C        &pht LC(D) D        &pht LC(V) V    &kp LC(LS(N3))  &pht LC(LA(DEL)) LG(L)              &kp PLUS    &kp EQUAL   &pht LC(K) K    &kp H            &pht LS(COMMA) COMMA   &pht LS(DOT) DOT    &pht LS(FSLH) FSLH  &none
                                                                         &kp A               &kp LALT            &mo LOWER       &kp LC(BSPC)    &kp LCTRL                           &kp ENTER   &kp SPACE   &mo RAISE       &none            &out OUT_TOG
             >;
 
