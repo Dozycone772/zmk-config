@@ -81,21 +81,23 @@
         lh_hrm: left_positional_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <200>;
+            flavor = "balanced";
+            tapping-term-ms = <280>;
             require-prior-idle-ms = <125>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 32 33 34 35 36 37 38 39 45 46 47 48 49>;
+            hold-trigger-on-release;
         };
 
         rh_hrm: right_positional_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <200>;
+            flavor = "balanced";
+            tapping-term-ms = <280>;
             require-prior-idle-ms = <125>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 30 31 40 41 42 43 44>;
+            hold-trigger-on-release;
         };
     };
 
@@ -231,20 +233,16 @@
                 &td_mtls        &pht LC(Z) Z        &pht LC(X) X        &pht LC(C) C        &pht LC(D) D        &pht LC(V) V    &kp LC(LS(N3))  &pht LC(LA(DEL)) LG(L)              &kp PLUS    &kp EQUAL   &pht LC(K) K    &kp H            &pht LS(COMMA) COMMA   &pht LS(DOT) DOT    &pht LS(FSLH) FSLH  &td_mtrs
                                                                         &kp A               &kp LALT            &mo LOWER       &kp LC(BSPC)    &kp LCTRL                           &kp ENTER   &kp SPACE   &mo RAISE       &none            &out OUT_TOG
             >;
-
             sensor-bindings = <&left_encoder_rotate &right_encoder_rotate>;
-
-
         };
         
         RAISE_layer {
             bindings = <
-                &trans          &trans          &kp LC(PG_UP)      &trans          &trans        &trans                                                                                      &trans          &trans          &trans                  &trans              &trans              &trans
+                &trans          &trans          &kp LC(PG_UP)      &trans          &trans        &trans                                                                                        &trans          &trans          &trans                  &trans              &trans              &trans
                 &kp DEL         &trans          &kp LC(PG_DN)      &kp LCTRL       &kp LSHFT       &trans                                                                                      &kp HOME        &kp LEFT        &kp DOWN                &kp UP              &kp RIGHT           &kp END
                 &trans          &kp LC(Z)       &kp LC(X)          &kp LC(C)       &kp LC(D)       &kp LC(V)       &trans          &trans                              &trans      &trans      &trans          &td_minund      &trans                  &trans              &trans              &trans
                                                                    &trans          &trans          &mo ADJUST      &trans          &kp ENTER                           &trans      &trans      &trans          &kp HOME        &kp END
             >;
-
         };
 
         LOWER_layer {
@@ -254,7 +252,6 @@
                 &trans          &out OUT_TOG    &bt BT_NXT      &kp PG_DN       &kp PG_UP       &kp F12         &trans          &trans                              &trans      &trans      &kp MINUS       &kp N1          &kp N2                  &kp N3              &kp FSLH            &kp ASTRK
                                                                 &trans          &trans          &trans          &trans          &trans                              &trans      &trans      &kp N0          &trans          &trans
             >;
-
         };
 
         ADJUST_layer {
