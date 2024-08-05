@@ -247,6 +247,13 @@
             bindings = <&td_mtrs>;
         };  
 
+            combo_esc {
+            timeout-ms = <200>;
+            key-positions = <9 10>;
+            layers = <0 1 2 3 4 5>;
+            bindings = <&kp ESC>;
+        };  
+
             combo_capsword {
             timeout-ms = <20>;
             key-positions = <44 45>;
@@ -260,8 +267,8 @@
 
         default_layer {
             bindings = <
-                &kp TAB         &kp Q               &pht LC(W) W        &pht LC(F) F        &pht LC(P) P        &pht LC(B) B                                                                                &pht LC(J) J    &pht LC(L) L     &pht LC(U) U           &pht LC(Y) Y        &pht LS(SEMI) SEMI  &kp ESC
-                &caps_word      &lh_hrmw LGUI A     &lh_hrmw LALT R     &lh_hrms LCTRL S    &lh_hrms LSHFT T    &pht LC(G) G                                                                                       &kp M    &rh_hrms RSHFT N &rh_hrms RCTRL E       &rh_hrmw RALT I     &rh_hrmw RGUI O     &pht LS(SQT) SQT
+                &kp TAB         &kp Q               &pht LC(W) W        &pht LC(F) F        &pht LC(P) P        &pht LC(B) B                                                                                &pht LC(J) J    &pht LC(L) L     &pht LC(U) U           &pht LC(Y) Y        &pht LS(SQT) SQT    &none
+                &none           &lh_hrmw LGUI A     &lh_hrmw LALT R     &lh_hrms LCTRL S    &lh_hrms LSHFT T    &pht LC(G) G                                                                                &kp M           &rh_hrms RSHFT N &rh_hrms RCTRL E       &rh_hrmw RALT I     &rh_hrmw RGUI O     &none
                 &none           &pht LC(Z) Z        &pht LC(X) X        &pht LC(C) C        &pht LC(D) D        &pht LC(V) V    &kp LC(LS(N3))  &pht LC(LA(DEL)) LG(L)              &kp PLUS    &kp EQUAL   &pht LC(K) K    &kp H            &pht LS(COMMA) COMMA   &pht LS(DOT) DOT    &pht LS(FSLH) FSLH  &none
                                                                         &kp A               &kp LALT            &mo LOWER       &kp LC(BSPC)    &kp LCTRL                           &kp ENTER   &kp SPACE   &mo RAISE       &none            &out OUT_TOG
             >;
@@ -279,7 +286,7 @@
 
         LOWER_layer {
             bindings = <
-                &trans          &kp EXCL        &kp AT          &kp HASH        &kp DLLR        &kp PRCNT                                                                                   &kp PLUS        &kp N7          &kp N8                  &kp N9              &trans              &trans
+                &trans          &kp EXCL        &kp AT          &kp HASH        &kp DLLR        &kp PRCNT                                                                                   &kp PLUS        &kp N7          &kp N8                  &kp N9              &pht LS(SQT) SQT    &trans
                 &none           &kp F2          &kp F4          &mkp MB2        &mkp MB1        &kp F5                                                                                      &kp EQUAL       &kp N4          &kp N5                  &kp N6              &kp DOT             &trans
                 &trans          &out OUT_TOG    &bt BT_NXT      &kp PG_DN       &kp PG_UP       &kp F12         &trans          &trans                              &trans      &trans      &kp MINUS       &kp N1          &kp N2                  &kp N3              &kp FSLH            &kp ASTRK
                                                                 &trans          &trans          &trans          &trans          &trans                              &trans      &trans      &kp N0          &trans          &trans
