@@ -117,6 +117,14 @@
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 30 31 40 41 42 43 44>;
             hold-trigger-on-release;
         };
+
+        thb_lr: thumb_layer_positional_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <125>;
+            bindings = <&mo>, <&kp>;
+        };
     };
 
     macros {
@@ -267,10 +275,10 @@
 
         default_layer {
             bindings = <
-                &kp TAB         &kp Q               &pht LC(W) W        &pht LC(F) F        &pht LC(P) P        &pht LC(B) B                                                                                &pht LC(J) J    &pht LC(L) L     &pht LC(U) U           &pht LC(Y) Y        &pht LS(SQT) SQT    &none
-                &none           &lh_hrmw LGUI A     &lh_hrmw LALT R     &lh_hrms LCTRL S    &lh_hrms LSHFT T    &pht LC(G) G                                                                                &kp M           &rh_hrms RSHFT N &rh_hrms RCTRL E       &rh_hrmw RALT I     &rh_hrmw RGUI O     &none
-                &none           &pht LC(Z) Z        &pht LC(X) X        &pht LC(C) C        &pht LC(D) D        &pht LC(V) V    &kp LC(LS(N3))  &pht LC(LA(DEL)) LG(L)              &kp PLUS    &kp EQUAL   &pht LC(K) K    &kp H            &pht LS(COMMA) COMMA   &pht LS(DOT) DOT    &pht LS(FSLH) FSLH  &none
-                                                                        &kp A               &kp LALT            &mo LOWER       &kp LC(BSPC)    &kp LCTRL                           &kp ENTER   &kp SPACE   &mo RAISE       &none            &out OUT_TOG
+                &kp TAB         &kp Q               &pht LC(W) W        &pht LC(F) F        &pht LC(P) P        &pht LC(B) B                                                                                &pht LC(J) J        &pht LC(L) L     &pht LC(U) U           &pht LC(Y) Y        &pht LS(SQT) SQT    &none
+                &none           &lh_hrmw LGUI A     &lh_hrmw LALT R     &lh_hrms LCTRL S    &lh_hrms LSHFT T    &pht LC(G) G                                                                                &kp M               &rh_hrms RSHFT N &rh_hrms RCTRL E       &rh_hrmw RALT I     &rh_hrmw RGUI O     &none
+                &none           &pht LC(Z) Z        &pht LC(X) X        &pht LC(C) C        &pht LC(D) D        &pht LC(V) V    &kp LC(LS(N3))  &pht LC(LA(DEL)) LG(L)              &kp PLUS    &kp EQUAL   &pht LC(K) K        &kp H            &pht LS(COMMA) COMMA   &pht LS(DOT) DOT    &pht LS(FSLH) FSLH  &none
+                                                                        &kp A               &kp LALT            &mo LOWER       &kp LC(BSPC)    &kp LCTRL                           &kp ENTER   &kp SPACE   &thb_lr RAISE ENTER &none            &out OUT_TOG
             >;
             sensor-bindings = <&left_encoder_rotate &right_encoder_rotate>;
         };
