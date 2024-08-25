@@ -263,7 +263,7 @@
         };  
 
             combo_capsword {
-            timeout-ms = <20>;
+            timeout-ms = <200>;
             key-positions = <44 45>;
             layers = <0 1 2 3 4 5>;
             bindings = <&caps_word>;
@@ -287,9 +287,9 @@
         RAISE_layer {
             bindings = <
                 &trans          &trans          &kp LC(PG_UP)      &trans          &trans        &trans                                                                                        &trans          &trans          &trans                  &trans              &trans              &trans
-                &kp DEL         &trans          &kp LC(PG_DN)      &kp LCTRL       &kp LSHFT       &trans                                                                                      &kp HOME        &kp LEFT        &kp DOWN                &kp UP              &kp RIGHT           &kp END
-                &trans          &kp LC(Z)       &kp LC(X)          &kp LC(C)       &kp LC(D)       &kp LC(V)       &trans          &trans                              &trans      &trans      &trans          &td_minund      &trans                  &trans              &trans              &trans
-                                                                   &trans          &trans          &mo ADJUST      &trans          &kp ENTER                           &trans      &trans      &trans          &kp HOME        &kp END
+                &kp DEL         &trans          &kp LC(PG_DN)      &kp LCTRL       &kp LSHFT       &trans                                                                                      &td_minund      &kp LEFT        &kp DOWN                &kp UP              &kp RIGHT           &trans
+                &trans          &kp LC(Z)       &kp LC(X)          &kp LC(C)       &kp LC(D)       &kp LC(V)       &trans          &trans                              &trans      &trans      &trans          &kp HOME        &kp LC(PG_DN)           &kp LC(PG_UP)       &kp END             &trans
+                                                                   &trans          &trans          &mo ADJUST      &trans          &kp ENTER                           &trans      &trans      &trans          &trans          &trans
             >;
         };
 
