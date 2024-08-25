@@ -88,16 +88,6 @@
             hold-trigger-on-release;
         };
 
-        rh_hrms: right_positional_hold_tap_strong {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <125>;
-            bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 30 31 40 41 42 43 44>;
-            hold-trigger-on-release;
-        };
-
         lh_hrmr: left_positional_hold_tap_ring {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -115,6 +105,26 @@
             tapping-term-ms = <500>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 32 33 34 35 36 37 38 39 45 46 47 48 49>;
+            hold-trigger-on-release;
+        };
+
+        rh_hrms: right_positional_hold_tap_strong {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <125>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 30 31 40 41 42 43 44>;
+            hold-trigger-on-release;
+        };
+
+        rh_hrmm: right_positional_hold_tap_middle {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 30 31 40 41 42 43 44>;
             hold-trigger-on-release;
         };
 
@@ -277,7 +287,7 @@
         default_layer {
             bindings = <
                 &none           &kp Q               &pht LC(W) W        &pht LC(F) F        &pht LC(P) P        &pht LC(B) B                                                                                       &pht LC(J) J        &pht LC(L) L     &pht LC(U) U           &pht LC(Y) Y        &pht LS(SQT) SQT    &none
-                &none           &lh_hrmp LGUI A     &lh_hrmr LALT R     &lh_hrms LCTRL S    &lh_hrms LSHFT T    &pht LC(G) G                                                                                       &kp M               &rh_hrms RSHFT N &rh_hrms RCTRL E       &pht LC(I) I        &pht LC(O) O        &none
+                &none           &lh_hrmp LGUI A     &lh_hrmr LALT R     &lh_hrms LCTRL S    &lh_hrms LSHFT T    &pht LC(G) G                                                                                       &kp M               &rh_hrms RSHFT N &rh_hrmm RCTRL E       &pht LC(I) I        &pht LC(O) O        &none
                 &none           &pht LC(Z) Z        &pht LC(X) X        &pht LC(C) C        &pht LC(D) D        &pht LC(V) V           &kp LC(LS(N3))  &pht LC(LA(DEL)) LG(L)              &kp PLUS    &kp EQUAL   &pht LC(K) K        &kp H            &pht LS(COMMA) COMMA   &pht LS(DOT) DOT    &pht LS(FSLH) FSLH  &none
                                                                         &kp A               &kp LALT            &thb_lr LOWER TAB      &kp LC(BSPC)    &none                               &none       &kp SPACE   &thb_lr RAISE ENTER &none            &out OUT_TOG
             >;
