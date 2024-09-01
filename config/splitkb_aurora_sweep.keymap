@@ -124,8 +124,150 @@
         };
     };
 
+    macros {
+        slippw: slippw {
+            label = "SLIPPW";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <5>;
+            tap-ms = <5>;
+            bindings
+                = <&macro_tap &kp D &kp Y &kp W &kp LS(T) &kp M &kp L &kp M &kp LS(F)>
+                ; 
+        };
 
-        keymap {
+        msdunm: msdunm {
+            label = "MSDUSERNAME";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <5>;
+            tap-ms = <5>;
+            bindings
+                = <&macro_tap &kp R &kp B &kp R &kp O &kp W &kp N0 &kp N4 &kp N6 &kp TAB>
+                ; 
+        };
+
+        pwcunm: pwcu {
+            label = "PWCUSERNAME";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <5>;
+            tap-ms = <5>;
+            bindings
+                = <&macro_tap &kp R &kp Y &kp A &kp N &kp DOT &kp S &kp DOT &kp B &kp R &kp O &kp W &kp N &kp AT &kp P &kp W &kp C &kp DOT &kp C &kp O &kp M &kp TAB>
+                ; 
+        };
+    };
+
+    combos {            
+        compatible = "zmk,combos";
+            combo_excellayer {
+            timeout-ms = <20>;
+            key-positions = <11 12>;
+            layers = <0 1 2 3 4 5>;
+            bindings = <&mo EXCEL>;
+        };  
+
+            combo_sliplayer {
+            timeout-ms = <20>;
+            key-positions = <16 18>;
+            layers = <0 1 2 3 4 5>;
+            bindings = <&mo SLIP>;
+        };  
+
+            combo_BSPC {
+            timeout-ms = <200>;
+            key-positions = <12 31>;
+            layers = <0 1 2 3 4 5>;
+            bindings = <&kp BSPC>;
+        };  
+
+            combo_excl {
+            timeout-ms = <200>;
+            key-positions = <0 10>;
+            layers = <0 1 2 3 4 5>;
+            bindings = <&kp EXCL>;
+        };  
+
+            combo_atsym {
+            timeout-ms = <200>;
+            key-positions = <1 11>;
+            layers = <0 1 2 3 4 5>;
+            bindings = <&kp AT>;
+        };  
+
+            combo_hash {
+            timeout-ms = <200>;
+            key-positions = <2 12>;
+            layers = <0 1 2 3 4 5>;
+            bindings = <&kp HASH>;
+        };  
+
+            combo_dollar {
+            timeout-ms = <200>;
+            key-positions = <3 13>;
+            layers = <0 1 2 3 4 5>;
+            bindings = <&kp DLLR>;
+        };  
+
+            combo_prcnt {
+            timeout-ms = <200>;
+            key-positions = <4 14>;
+            layers = <0 1 2 3 4 5>;
+            bindings = <&kp PRCNT>;
+        };  
+
+            combo_raise {
+            timeout-ms = <200>;
+            key-positions = <5 15>;
+            layers = <0 1 2 3 4 5>;
+            bindings = <&kp CARET>;
+        };  
+
+            combo_ampsd {
+            timeout-ms = <200>;
+            key-positions = <6 16>;
+            layers = <0 1 2 3 4 5>;
+            bindings = <&kp AMPS>;
+        };  
+
+            combo_astx {
+            timeout-ms = <200>;
+            key-positions = <7 17>;
+            layers = <0 1 2 3 4 5>;
+            bindings = <&kp ASTRK>;
+        };  
+
+            combo_lbrc {
+            timeout-ms = <200>;
+            key-positions = <8 18>;
+            layers = <0 1 2 3 4 5>;
+            bindings = <&td_mtls>;
+        };  
+
+            combo_rbrc {
+            timeout-ms = <200>;
+            key-positions = <9 19>;
+            layers = <0 1 2 3 4 5>;
+            bindings = <&td_mtrs>;
+        };  
+
+            combo_esc {
+            timeout-ms = <200>;
+            key-positions = <8 9>;
+            layers = <0 1 2 3 4 5>;
+            bindings = <&kp ESC>;
+        };  
+
+            combo_capsword {
+            timeout-ms = <200>;
+            key-positions = <31 32>;
+            layers = <0 1 2 3 4 5>;
+            bindings = <&caps_word>;
+        };  
+    };
+
+    keymap {
                 compatible = "zmk,keymap";
 
             default_layer {
