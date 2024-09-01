@@ -268,43 +268,60 @@
     };
 
     keymap {
-                compatible = "zmk,keymap";
+        compatible = "zmk,keymap";
 
-            default_layer {
-        bindings = <
-        &kp Q &kp W &kp E &kp R &kp T                       &kp Y &kp U  &kp I    &kp O   &kp P
-        &kp A &kp S &kp D &kp F &kp G                               &kp H &kp J &kp K &kp L &kp QUOT
-        &mt LSFT Z &kp X &kp C &kp V &kp B                      &kp N &kp M  &kp CMMA &kp DOT &mt LSFT RET
-                        &mo 1 &kp LCTL                  &kp SPC &mo 2
-        >;
+        default_layer {
+            bindings = <
+                &kp Q               &pht LC(W) W        &pht LC(F) F        &pht LC(P) P        &pht LC(B) B                                               &pht LC(J) J        &pht LC(L) L     &pht LC(U) U           &pht LC(Y) Y        &pht LS(SQT) SQT
+                &lh_hrmp LGUI A     &lh_hrmr LALT R     &lh_hrmm LCTRL S    &lh_hrms LSHFT T    &pht LC(G) G                                               &kp M               &rh_hrms RSHFT N &rh_hrmm RCTRL E       &pht LC(I) I        &pht LC(O) O
+                &pht LC(Z) Z        &pht LC(X) X        &pht LC(C) C        &pht LC(D) D        &pht LC(V) V                                               &pht LC(K) K        &kp H            &pht LS(COMMA) COMMA   &pht LS(DOT) DOT    &pht LS(FSLH) FSLH
+                                                                                                &thb_lr LOWER TAB   &kp LC(BSPC)               &kp SPACE   &thb_lr RAISE ENTER 
+            >;
+        };
+        
+        RAISE_layer {
+            bindings = <
+                &trans          &trans             &trans          &trans          &trans                                       &trans          &trans          &trans                  &trans              &trans
+                &trans          &kp LALT           &kp LCTRL       &kp LSHFT       &trans                                       &td_minund      &kp LEFT        &kp DOWN                &kp UP              &kp RIGHT
+                &kp LC(Z)       &kp LC(X)          &kp LC(C)       &kp LC(D)       &kp LC(V)                                    &trans          &kp HOME        &kp LC(PG_DN)           &kp LC(PG_UP)       &kp END
+                                                                                   &mo ADJUST      &trans           &trans      &trans
+            >;
         };
 
-            left_layer {
-        bindings = <
-        &kp NUM_1  &kp NUM_2    &kp NUM_3    &kp NUM_4    &kp NUM_5     &kp NUM_6 &kp NUM_7 &kp NUM_8 &kp NUM_9 &kp NUM_0
-        &kp TAB    &kp LC(S)    &kp DQT      &kp PIPE2     &kp HASH         &kp MINUS &kp EQL  &kp LBKT &kp RBKT  &kp DEL
-        &kp ESC    &kp TILDE    &kp NON_US_BSLH &kp NON_US_HASH  &kp TILDE2     &kp MINUS &kp GRAVE &kp LBKT &kp RBKT  &kp DEL
-                        &mo 1  &kp LGUI                     &kp RGUI &mo 2
-        >;
+        LOWER_layer {
+            bindings = <
+                &kp EXCL        &kp AT          &kp HASH        &kp DLLR        &kp PRCNT                                       &kp PLUS        &kp N7          &kp N8                  &kp N9              &pht LS(SEMI) SEMI
+                &kp F2          &kp F4          &mkp MB2        &mkp MB1        &kp F5                                          &kp EQUAL       &kp N4          &kp N5                  &kp N6              &kp DOT
+                &out OUT_TOG    &bt BT_NXT      &kp PG_DN       &kp PG_UP       &kp F12                                         &kp MINUS       &kp N1          &kp N2                  &kp N3              &kp FSLH
+                                                                                &trans          &trans              &trans      &kp N0
+            >;
         };
 
-        right_layer {
-        bindings = <
-        &kp BANG  &kp ATSN &kp HASH  &kp DLLR  &kp PRCT             &kp CRRT  &kp AMPS &kp KMLT &kp LPRN &kp RPRN
-        &kp HASH  &kp QMARK  &kp FSLH  &kp COLN  &kp SCLN           &kp MINUS &kp KP_EQUAL  &kp LBRC  &kp RBRC   &kp BKSP
-        &kp LSFT  &kp KPLS &kp LBKT &kp RBKT   &kp BSLH             &kp UNDER &kp LEFT &kp DOWN &kp UP  &kp RIGHT
-                      &mo 3 &kp LCTL                &kp SPC  &mo 2
-        >;
+        ADJUST_layer {
+            bindings = <
+                &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_NXT      &bt BT_CLR                                      &kp PLUS        &kp N7          &kp N8                  &kp N9              &trans
+                &kp N1          &kp N2          &kp N3          &kp N4          &kp Q                                           &kp EQUAL       &kp N4          &kp N5                  &kp N6              &kp DOT
+                &kp N6          &kp N7          &kp N8          &kp N9          &kp N0                                          &kp MINUS       &kp N1          &kp N2                  &kp N3              &kp FSLH
+                                                                                &trans          &kp LGUI            &trans      &kp N0
+            >;
         };
 
-        tri_layer {
-        bindings = <
-        &kp NUM_1  &kp NUM_2    &kp NUM_3    &kp NUM_4    &kp NUM_5             &trans &trans   &trans   &trans  &trans
-        &kp F1 &kp F2 &kp F3 &kp F4 &kp F5                          &trans &kp PG_UP  &kp K_VOL_UP &kp K_MUTE &trans
-        &bt BT_CLR  &bt BT_NXT &bt BT_PRV &kp F6 &kp F7                 &trans &kp PG_DN  &kp K_VOL_DN  &trans &trans
-                     &trans &trans                      &trans &trans
-        >;
+        EXCEL_layer {
+            bindings = <
+                &trans          &trans          &trans          &trans          &trans                                              &kp TAB         &kp N7          &kp N8                  &kp N9              &kp ASTRK
+                &trans          &trans          &trans          &trans          &trans                                              &kp PLUS        &kp N4          &kp N5                  &kp N6              &kp DOT
+                &trans          &trans          &trans          &trans          &trans                                              &kp MINUS       &kp N1          &kp N2                  &kp N3              &kp FSLH
+                                                                                &trans          &trans              &kp SPACE       &kp N0
+            >;
         };
 
+        SLIP_layer {
+            bindings = <
+                &trans          &trans          &trans          &trans          &trans                                          &trans          &trans          &trans                  &trans              &trans
+                &trans          &trans          &trans          &trans          &trans                                          &trans          &trans          &trans                  &trans              &trans
+                &trans          &trans          &trans          &trans          &trans                                          &trans          &trans          &trans                  &trans              &trans
+                                                                                &trans          &trans              &slippw     &pwcunm
+            >;
+        };
     };
 };
