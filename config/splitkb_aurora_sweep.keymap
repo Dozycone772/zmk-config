@@ -258,8 +258,15 @@
             combo_lockcad {
             timeout-ms = <200>;
             key-positions = <0 1>;
-            layers = <0 1 2 3 4 5>;
+            layers = <0>;
             bindings = <&pht LC(LA(DEL)) LG(L)>;
+        };
+          
+            combo_outputtoggle {
+            timeout-ms = <200>;
+            key-positions = <0 1>;
+            layers = <1>;
+            bindings = <&out OUT_TOG>;
         };
     };
 
@@ -277,7 +284,7 @@
         
         RAISE_layer {
             bindings = <
-                &trans          &trans             &trans          &trans          &trans                                       &trans          &trans          &trans                  &trans              &trans
+                &bt BT_PRV      &bt BT_NXT         &trans          &trans          &trans                                       &trans          &trans          &trans                  &trans              &trans
                 &kp DEL         &kp LALT           &kp LCTRL       &kp LSHFT       &trans                                       &td_minund      &kp LEFT        &kp DOWN                &kp UP              &kp RIGHT
                 &kp LC(Z)       &kp LC(X)          &kp LC(C)       &kp LC(D)       &kp LC(V)                                    &trans          &kp HOME        &kp LC(PG_DN)           &kp LC(PG_UP)       &kp END
                                                                                    &mo ADJUST      &trans           &trans      &trans
