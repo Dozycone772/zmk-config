@@ -264,7 +264,14 @@
             key-positions = <31 32>;
             layers = <0 1 2 3 4 5>;
             bindings = <&caps_word>;
-        };  
+        };
+
+            combo_lockcad {
+            timeout-ms = <200>;
+            key-positions = <0 1>;
+            layers = <0 1 2 3 4 5>;
+            bindings = <&pht LC(LA(DEL)) LG(L)>;
+        };
     };
 
     keymap {
