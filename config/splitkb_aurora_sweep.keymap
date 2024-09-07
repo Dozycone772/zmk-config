@@ -264,7 +264,7 @@
 
             combo_btclear {
             timeout-ms = <200>;
-            key-positions = <1 2 3 4>;
+            key-positions = <0 1 2 3>;
             layers = <1>;
             bindings = <&bt BT_CLR>;
         };
