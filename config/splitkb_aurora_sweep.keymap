@@ -291,8 +291,8 @@
         
         RAISE_layer {
             bindings = <
-                &bt BT_SEL 0    &bt BT_SEL 1       &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                                 &trans          &trans          &trans                  &trans              &trans
-                &kp DEL         &kp LALT           &kp LCTRL       &kp LSHFT       &trans                                       &td_minund      &kp LEFT        &kp DOWN                &kp UP              &kp RIGHT
+                &bt BT_SEL 0    &bt BT_SEL 1       &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                                 &out OUT_TOG    &trans          &trans                  &trans              &trans
+                &kp DEL         &kp LALT           &kp LCTRL       &kp LSHFT       &bt BT_CLR                                   &td_minund      &kp LEFT        &kp DOWN                &kp UP              &kp RIGHT
                 &kp LC(Z)       &kp LC(X)          &kp LC(C)       &kp LC(D)       &kp LC(V)                                    &trans          &kp HOME        &kp LC(PG_DN)           &kp LC(PG_UP)       &kp END
                                                                                    &mo ADJUST      &trans           &trans      &trans
             >;
