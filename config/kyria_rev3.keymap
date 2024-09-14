@@ -67,7 +67,7 @@
             label = "NEWEMAIL";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <250>;
+            wait-ms = <500>;
             tap-ms = <5>;
             bindings
                 = <&macro_tap &kp LG(T)>
