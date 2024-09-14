@@ -63,14 +63,14 @@
                 ; 
         };
 
-        pwcunm: pwcu {
-            label = "PWCUSERNAME";
+        neweml: neweml {
+            label = "NEWEMAIL";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <5>;
             tap-ms = <5>;
             bindings
-                = <&macro_tap &kp R &kp Y &kp A &kp N &kp DOT &kp S &kp DOT &kp B &kp R &kp O &kp W &kp N &kp AT &kp P &kp W &kp C &kp DOT &kp C &kp O &kp M &kp TAB>
+                = <&macro_tap &kp LG(T) &kp K_APP &kp UP &kp UP &kp UP &kp UP &kp UP &kp UP &kp UP &kp UP &kp ENTER>
                 ; 
         };
     };
@@ -83,7 +83,7 @@
                 &kp ESC         &kp Q               &kp W               &kp E               &kp R               &kp T                                                                                              &kp Y               &kp U            &kp I                  &kp O               &kp P               &kp BSPC
                 &kp DEL         &kp A               &kp S               &kp D               &kp F               &kp G                                                                                              &kp H               &kp J            &kp K                  &kp L               &kp SEMI            &kp SQT
                 &kp LSHFT       &kp Z               &kp X               &kp C               &kp V               &kp B                  &pht LC(LA(DEL)) LG(L)  &kp KP_NUM                  &kp LPAR    &kp RPAR    &kp N               &kp M            &kp COMMA              &kp DOT             &kp FSLH            &kp ENTER
-                                                                        &none               &kp MINUS           &mo LOWER              &kp LCTRL               &kp LALT                    &kp DLLR    &kp SPACE   &mo RAISE           &kp PLUS         &none
+                                                                        &none               &kp MINUS           &mo LOWER              &kp LCTRL               &kp LALT                    &kp DLLR    &kp SPACE   &mo RAISE           &kp PLUS         &neweml
             >;
             sensor-bindings = <&left_encoder_rotate &right_encoder_rotate>;
             display-name = "QWERTY";
