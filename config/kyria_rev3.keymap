@@ -86,7 +86,7 @@
                                                                         &none               &kp MINUS           &mo LOWER              &kp LCTRL               &kp LALT                    &kp DLLR    &kp SPACE   &mo RAISE           &kp PLUS         &none
             >;
             sensor-bindings = <&left_encoder_rotate &right_encoder_rotate>;
-            display-name = <BASE>
+            display-name = "BASE";
         };
         
         RAISE_layer {
