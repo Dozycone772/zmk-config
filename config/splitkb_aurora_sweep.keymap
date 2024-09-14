@@ -52,7 +52,7 @@
             label = "tap_dance_usernames";
             #binding-cells = <0>;
             tapping-term-ms = <400>;
-            bindings = <&kp pwcunm>, <&kp msdunm>;
+            bindings = <&pwcunm>, <&msdunm>;
         };
 
         pht: positional_hold_tap {
