@@ -74,7 +74,7 @@
                 , <&macro_tap &kp K_APP>
                 , <&macro_tap &kp UP>
                 , <&macro_wait_time 100>
-                , <&macro_tap &kp UP &kp UP &kp UP &kp UP &kp UP &kp UP &kp UP &kp ENTER>
+                , <&macro_tap &kp UP &kp UP &kp UP &kp UP &kp UP &kp UP &kp UP &kp ENTER &kp LG(T) &kp LGUI &kp LGUI &kp LA(TAB)>
                 ; 
         };
     };
