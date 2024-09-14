@@ -72,8 +72,9 @@
             bindings
                 = <&macro_tap &kp LG(T)>
                 , <&macro_tap &kp K_APP>
-                , <&macro_wait_time 5>
-                , <&macro_tap &kp UP &kp UP &kp UP &kp UP &kp UP &kp UP &kp UP &kp UP &kp ENTER>
+                , <&macro_tap &kp UP>
+                , <&macro_wait_time 20>
+                , <&macro_tap &kp UP &kp UP &kp UP &kp UP &kp UP &kp UP &kp UP &kp ENTER>
                 ; 
         };
     };
