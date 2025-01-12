@@ -9,7 +9,7 @@
     Add bootloader key to both sides
     Try switching nav layer to left thumb? Swap the two?
     Implement mouse layer, use backspace hold to trigger as per Miryoku
-    Implement button layer on left half for mouse use. Z hold as trigger
+    Implement button layer on left half for mouse use. Z hold as trigger.
  */
 
 #include <behaviors.dtsi>
