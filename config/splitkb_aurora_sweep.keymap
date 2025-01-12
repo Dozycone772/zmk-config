@@ -6,7 +6,6 @@
 
 /*Dev List
     HRMs onto layers, on same side as layer thumb
-    Add bootloader key to both sides
     Try switching nav layer to left thumb? Swap the two?
     Implement mouse layer, use backspace hold to trigger as per Miryoku
     Implement button layer on left half for mouse use. Z hold as trigger.
@@ -22,7 +21,7 @@
 #define RAISE 1
 #define LOWER 2
 #define ADJUST 3
-#define EXCEL 4
+#define MOUSE 4
 #define SLIP 5
 
 &mt {
@@ -176,14 +175,6 @@
     };
 
     combos {            
-        compatible = "zmk,combos";
-            combo_excellayer {
-            timeout-ms = <20>;
-            key-positions = <11 12>;
-            layers = <0 1 2 3 4 5>;
-            bindings = <&mo EXCEL>;
-        };  
-
             combo_sliplayer {
             timeout-ms = <20>;
             key-positions = <16 18>;
@@ -312,7 +303,7 @@
                 &kp Q               &pht LC(W) W        &pht LC(F) F        &pht LC(P) P        &pht LC(B) B                                               &pht LC(J) J        &pht LC(L) L     &pht LC(U) U           &pht LC(Y) Y        &pht LS(SQT) SQT
                 &lh_hrmp LGUI A     &lh_hrmr LALT R     &lh_hrmm LCTRL S    &lh_hrms LSHFT T    &pht LC(G) G                                               &kp M               &rh_hrms RSHFT N &rh_hrmm RCTRL E       &pht LC(I) I        &pht LC(O) O
                 &pht LC(Z) Z        &pht LC(X) X        &pht LC(C) C        &pht LC(D) D        &pht LC(V) V                                               &pht LC(K) K        &kp H            &pht LS(COMMA) COMMA   &pht LS(DOT) DOT    &pht LS(FSLH) FSLH
-                                                                                                &thb_lr LOWER TAB   &kp LC(BSPC)               &kp SPACE   &thb_lr RAISE ENTER 
+                                                                                                &thb_lr LOWER TAB   &thb_lr MOUSE LC(BSPC)     &kp SPACE   &thb_lr RAISE ENTER 
             >;
         };
         
@@ -343,9 +334,9 @@
             >;
         };
 
-        EXCEL_layer {
+        MOUSE_layer {
             bindings = <
-                &trans          &trans          &trans          &trans          &trans                                              &kp TAB         &kp N7          &kp N8                  &kp N9              &kp ASTRK
+                &trans          &trans          &trans          &trans          &trans                                              &kp A           &kp N7          &kp N8                  &kp N9              &kp ASTRK
                 &trans          &trans          &trans          &trans          &trans                                              &kp PLUS        &kp N4          &kp N5                  &kp N6              &kp DOT
                 &trans          &trans          &trans          &trans          &trans                                              &kp MINUS       &kp N1          &kp N2                  &kp N3              &kp FSLH
                                                                                 &trans          &trans              &kp SPACE       &kp N0
