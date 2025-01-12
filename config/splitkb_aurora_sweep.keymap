@@ -4,6 +4,14 @@
  * SPDX-License-Identifier: MIT
  */
 
+/*Dev List
+    HRMs onto layers, on same side as layer thumb
+    Add bootloader key to both sides
+    Try switching nav layer to left thumb? Swap the two?
+    Implement mouse layer, use backspace hold to trigger as per Miryoku
+    Implement button layer on left half for mouse use. Z hold as trigger
+ */
+
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
@@ -346,7 +354,7 @@
 
         SLIP_layer {
             bindings = <
-                &trans          &trans          &trans          &trans          &trans                                          &trans          &trans          &trans                  &trans              &trans
+                &bootloader     &trans          &trans          &trans          &trans                                          &trans          &trans          &trans                  &trans              &bootloader
                 &trans          &trans          &trans          &trans          &trans                                          &trans          &trans          &trans                  &trans              &trans
                 &trans          &trans          &trans          &trans          &trans                                          &trans          &trans          &trans                  &trans              &trans
                                                                                 &trans          &trans              &slippw     &td_usrnms
