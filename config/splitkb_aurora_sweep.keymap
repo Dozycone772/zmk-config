@@ -7,6 +7,7 @@
 /*Dev List
     HRMs onto layers, on same side as layer thumb
     Try switching nav layer to left thumb? Swap the two?
+    Edit raise layer keymap cut, copy, paste etc. to match Miryoku
  */
 
 #include <behaviors.dtsi>
