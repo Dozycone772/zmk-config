@@ -15,7 +15,7 @@
 #define LOWER 2
 
 &mt {
-    tapping-term-ms = <200>;5
+    tapping-term-ms = <200>;
 };
 
 &sensors {
