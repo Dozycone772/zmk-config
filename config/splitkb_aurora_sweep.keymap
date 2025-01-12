@@ -7,7 +7,6 @@
 /*Dev List
     HRMs onto layers, on same side as layer thumb
     Try switching nav layer to left thumb? Swap the two?
-    Implement button layer on left half for mouse use. Z hold as trigger.
  */
 
 #include <behaviors.dtsi>
