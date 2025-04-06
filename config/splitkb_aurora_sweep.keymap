@@ -152,17 +152,6 @@
                 = <&macro_tap &kp R &kp Y &kp A &kp N &kp DOT &kp S &kp DOT &kp B &kp R &kp O &kp W &kp N &kp AT &kp P &kp W &kp C &kp DOT &kp C &kp O &kp M &kp TAB>
                 ; 
         };
-
-        msdunm: msdu {
-            label = "MSDUSERNAME";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <5>;
-            tap-ms = <5>;
-            bindings
-                = <&macro_tap &kp R &kp B &kp R &kp O &kp W &kp N0 &kp N4 &kp N6 &kp TAB>
-                ; 
-        };
     };
 
     combos {            
@@ -311,8 +300,8 @@
         LOWER_layer {
             bindings = <
                 &kp EXCL        &kp AT          &kp HASH        &kp DLLR        &kp PRCNT                                       &kp PLUS        &kp N7          &kp N8                  &kp N9              &pht LS(SEMI) SEMI
-                &kp F2          &kp F4          &trans          &trans          &kp F5                                          &kp EQUAL       &kp N4          &kp N5                  &kp N6              &kp DOT
-                &out OUT_TOG    &bt BT_NXT      &kp PG_DN       &kp PG_UP       &kp F12                                         &kp MINUS       &kp N1          &kp N2                  &kp N3              &kp FSLH
+                &kp F2          &kp F4          &mkp MB2        &mkp MB1        &kp F5                                          &kp EQUAL       &kp N4          &kp N5                  &kp N6              &kp DOT
+                &trans          &trans          &kp PG_DN       &kp PG_UP       &kp F12                                         &kp MINUS       &kp N1          &kp N2                  &kp N3              &kp FSLH
                                                                                 &trans          &trans              &trans      &kp N0
             >;
         };
@@ -328,9 +317,9 @@
 
         MOUSE_layer {
             bindings = <
-                &kp LC(Z)       &kp LC(X)       &kp LC(C)       &kp LC(V)       &kp LC(Y)                                       &kp LC(Y)       &kp LC(V)       &kp LC(C)               &kp LC(X)           &kp LC(Z)
-                &trans          &trans          &kp LCTRL       &kp LSHFT       &trans                                          &trans          &mmv MOVE_LEFT  &mmv MOVE_DOWN          &mmv MOVE_UP        &mmv MOVE_RIGHT
-                &kp LC(Z)       &kp LC(X)       &kp LC(C)       &kp LC(V)       &kp LC(Y)                                       &trans          &msc SCRL_LEFT  &msc SCRL_DOWN          &msc SCRL_UP        &msc SCRL_RIGHT
+                &kp LC(Z)       &kp LC(X)       &kp LC(C)       &kp LC(Y)       &kp LC(V)                                       &kp LC(Y)       &kp LC(V)       &kp LC(C)               &kp LC(X)           &kp LC(Z)
+                &mkp MB1        &mkp MB2        &kp LCTRL       &kp LSHFT       &trans                                          &trans          &mmv MOVE_LEFT  &mmv MOVE_DOWN          &mmv MOVE_UP        &mmv MOVE_RIGHT
+                &kp LC(Z)       &kp LC(X)       &kp LC(C)       &kp LC(Y)       &kp LC(V)                                       &trans          &msc SCRL_LEFT  &msc SCRL_DOWN          &msc SCRL_UP        &msc SCRL_RIGHT
                                                                                 &trans          &trans              &mkp MB1    &mkp MB2
             >;
         };
