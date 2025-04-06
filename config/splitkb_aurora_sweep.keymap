@@ -301,7 +301,7 @@
 
         default_layer {
             bindings = <
-                &kp Q               &pht LC(W) W        &pht LC(F) F        &pht LC(P) P        &pht LC(B) B                                               &pht LC(J) J        &pht LC(L) L     &pht LC(U) U           &pht LC(Y) Y        &pht LS(SQT) SQT
+                &kp Q               &pht LC(W) W        &pht LC(F) F        &kp P               &pht LC(B) B                                               &pht LC(J) J        &pht LC(L) L     &pht LC(U) U           &pht LC(Y) Y        &pht LS(SQT) SQT
                 &lh_hrmp LGUI A     &lh_hrmr LALT R     &lh_hrmm LCTRL S    &lh_hrms LSHFT T    &pht LC(G) G                                               &kp M               &rh_hrms RSHFT N &rh_hrmm RCTRL E       &pht LC(I) I        &pht LC(O) O
                 &pht LC(Z) Z        &pht LC(X) X        &pht LC(C) C        &pht LC(D) D        &pht LC(V) V                                               &pht LC(K) K        &kp H            &pht LS(COMMA) COMMA   &pht LS(DOT) DOT    &pht LS(FSLH) FSLH
                                                                                                 &thb_lr LOWER TAB   &thb_lr MOUSE LC(BSPC)     &kp SPACE   &thb_lr RAISE ENTER 
