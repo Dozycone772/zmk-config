@@ -22,7 +22,6 @@
 #define ADJUST 3
 #define MOUSE 4
 #define SLIP 5
-#define BUTTON 6
 
 &mt {
     tapping-term-ms = <200>;
@@ -52,14 +51,6 @@
             #binding-cells = <0>;
             tapping-term-ms = <400>;
             bindings = <&kp MINUS>, <&kp UNDER>;
-        };
-        
-        td_usrnms: tap_dance_usernames {
-            compatible = "zmk,behavior-tap-dance";
-            label = "tap_dance_usernames";
-            #binding-cells = <0>;
-            tapping-term-ms = <400>;
-            bindings = <&pwcunm>, <&msdunm>;
         };
 
         pht: positional_hold_tap {
@@ -349,16 +340,7 @@
                 &bootloader     &trans          &trans          &trans          &trans                                          &trans          &trans          &trans                  &trans              &bootloader
                 &trans          &trans          &trans          &trans          &trans                                          &trans          &trans          &trans                  &trans              &trans
                 &trans          &trans          &trans          &trans          &trans                                          &trans          &trans          &trans                  &trans              &trans
-                                                                                &trans          &trans              &slippw     &td_usrnms
-            >;
-        };
-
-        BUTTON_layer {
-            bindings = <
-                &trans          &trans          &trans          &trans          &trans                                          &trans          &trans          &trans                  &trans              &trans
-                &trans          &trans          &trans          &trans          &trans                                          &trans          &trans          &trans                  &trans              &trans
-                &trans          &trans          &trans          &trans          &trans                                          &trans          &trans          &trans                  &trans              &trans
-                                                                                &trans          &trans              &trans      &trans
+                                                                                &trans          &trans              &slippw     &trans
             >;
         };
     };
