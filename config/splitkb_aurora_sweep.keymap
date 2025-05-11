@@ -135,14 +135,14 @@
                 ; 
         };
 
-        pwcunm: pwcu {
-            label = "PWCUSERNAME";
+        lmkem: lmkem {
+            label = "LMKEMAIL";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <5>;
             tap-ms = <5>;
             bindings
-                = <&macro_tap &kp R &kp Y &kp A &kp N &kp DOT &kp S &kp DOT &kp B &kp R &kp O &kp W &kp N &kp AT &kp P &kp W &kp C &kp DOT &kp C &kp O &kp M &kp TAB>
+                = <&macro_tap &kp L &kp E &kp T &kp SPACE &kp M &kp E &kp SPACE &kp K &kp N &kp O &kp W &kp SPACE &kp I &kp F &kp SPACE &kp Y &kp O &kp U &kp SPACE &kp H &kp A &kp V &kp E &kp SPACE &kp A &kp N &kp Y &kp SPACE &kp Q &kp U &kp E &kp S &kp T &kp I &kp O &kp N &kp S &kp DOT>
                 ; 
         };
     };
@@ -154,6 +154,13 @@
             key-positions = <16 18>;
             layers = ALL_LAYERS; 
             bindings = <&mo SLIP>;
+        };  
+        
+            combo_LMKemail {
+            timeout-ms = <1500>;
+            key-positions = <6 15 25 32>;
+            layers = ALL_LAYERS; 
+            bindings = <&lmkem>;
         };  
 
             combo_BSPC {
