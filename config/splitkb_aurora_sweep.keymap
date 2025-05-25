@@ -154,8 +154,8 @@
         };  
         
             combo_LMKemail {
-            timeout-ms = <3000>;
-            key-positions = <6 15 25 32>;
+            timeout-ms = <500>;
+            key-positions = <0 6 32>;
             layers = ALL_LAYERS; 
             bindings = <&lmkem>;
         };  
