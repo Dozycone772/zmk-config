@@ -139,7 +139,7 @@
             wait-ms = <5>;
             tap-ms = <5>;
             bindings
-                = <&macro_tap &kp L &kp E &kp T &kp SPACE &kp M &kp E &kp SPACE &kp K &kp N &kp O &kp W &kp SPACE &kp I &kp F &kp SPACE &kp Y &kp O &kp U &kp SPACE &kp H &kp A &kp V &kp E &kp SPACE &kp A &kp N &kp Y &kp SPACE &kp Q &kp U &kp E &kp S &kp T &kp I &kp O &kp N &kp S &kp DOT>
+                = <&macro_tap &kp COMMA &kp SPACE &kp L &kp E &kp T &kp SPACE &kp M &kp E &kp SPACE &kp K &kp N &kp O &kp W &kp SPACE &kp I &kp F &kp SPACE &kp Y &kp O &kp U &kp SPACE &kp H &kp A &kp V &kp E &kp SPACE &kp A &kp N &kp Y &kp SPACE &kp Q &kp U &kp E &kp S &kp T &kp I &kp O &kp N &kp S &kp DOT>
                 ; 
         };
     };
