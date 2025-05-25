@@ -17,10 +17,6 @@
 #define SLIP 5
 #define ALL_LAYERS <0 1 2 3 4 5 6>
 
-&mt {
-    tapping-term-ms = <200>;
-};
-
 / {
     behaviors {
         td_mtls: tap_dance_triple_brackets_left {
