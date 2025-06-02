@@ -175,6 +175,39 @@
                 = <&macro_tap &kp Y &kp O &kp U>
                 ; 
         };
+
+        bcomthe: bcomthecap {
+            label = "BComTheCap";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <5>;
+            tap-ms = <5>;
+            bindings
+                = <&macro_tap &kp LS(T) &kp H &kp E>
+                ; 
+        };
+
+        bcomand: bcomandcap {
+            label = "BComAndCap";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <5>;
+            tap-ms = <5>;
+            bindings
+                = <&macro_tap &kp LS(A) &kp N &kp D>
+                ; 
+        };
+
+        bcomyou: bcomyoucap {
+            label = "BComYouCap";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <5>;
+            tap-ms = <5>;
+            bindings
+                = <&macro_tap &kp LS(Y) &kp O &kp U>
+                ; 
+        };
     };
 
     combos {            
@@ -218,21 +251,21 @@
             timeout-ms = <200>;
             key-positions = <13 16 31>;
             layers = ALL_LAYERS; 
-            bindings = <&macro_tap &kp LS(T) &kp H &kp E>;
+            bindings = <&bcomthecap>;
         };  
 
             combo_BComAndCap {
             timeout-ms = <200>;
             key-positions = <10 16 31>;
             layers = ALL_LAYERS; 
-            bindings = <&macro_tap &kp LS(A) &kp N &kp D>;
+            bindings = <&bcomandcap>;
         };  
 
             combo_BComYouCap {
             timeout-ms = <200>;
             key-positions = <8 13 31>;
             layers = ALL_LAYERS; 
-            bindings = <&macro_tap &kp LS(Y) &kp O &kp U>;
+            bindings = <&bcomyoucap>;
         };  
 
             combo_BSPC {
