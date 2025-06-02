@@ -153,6 +153,28 @@
                 = <&macro_tap &kp T &kp H &kp E>
                 ; 
         };
+
+        bcomand: bcomand {
+            label = "BComAnd";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <5>;
+            tap-ms = <5>;
+            bindings
+                = <&macro_tap &kp A &kp N &kp D>
+                ; 
+        };
+
+        bcomand: bcomyou {
+            label = "BComYou";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <5>;
+            tap-ms = <5>;
+            bindings
+                = <&macro_tap &kp Y &kp O &kp U>
+                ; 
+        };
     };
 
     combos {            
@@ -176,6 +198,20 @@
             key-positions = <13 31>;
             layers = ALL_LAYERS; 
             bindings = <&bcomthe>;
+        };  
+
+            combo_BComAnd {
+            timeout-ms = <200>;
+            key-positions = <10 31>;
+            layers = ALL_LAYERS; 
+            bindings = <&bcomand>;
+        };  
+
+            combo_BComYou {
+            timeout-ms = <200>;
+            key-positions = <9 31>;
+            layers = ALL_LAYERS; 
+            bindings = <&bcomyou>;
         };  
 
             combo_BSPC {
