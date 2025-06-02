@@ -15,7 +15,7 @@
 #define ADJUST 3
 #define MOUSE 4
 #define SLIP 5
-#define ALL_LAYERS <0 1 2 3 4 5 6>
+#define ALL_LAYERS <0 1 2 3 4 5>
 
 / {
     behaviors {
@@ -197,21 +197,21 @@
             timeout-ms = <200>;
             key-positions = <13 31>;
             layers = ALL_LAYERS; 
-            bindings = <&bcomthe>;
+            bindings = <&macro_tap &kp T &kp H &kp E>;
         };  
 
             combo_BComAnd {
             timeout-ms = <200>;
             key-positions = <10 31>;
             layers = ALL_LAYERS; 
-            bindings = <&bcomand>;
+            bindings = <&macro_tap &kp A &kp N &kp D>;
         };  
 
             combo_BComYou {
             timeout-ms = <200>;
             key-positions = <8 31>;
             layers = ALL_LAYERS; 
-            bindings = <&bcomyou>;
+            bindings = <&macro_tap &kp Y &kp O &kp U>;
         };  
 
             combo_BSPC {
