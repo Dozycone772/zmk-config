@@ -176,7 +176,7 @@
                 ; 
         };
 
-        bcomthe: bcomthecap {
+        bcomthecap: bcomthecap {
             label = "BComTheCap";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -187,7 +187,7 @@
                 ; 
         };
 
-        bcomand: bcomandcap {
+        bcomandcap: bcomandcap {
             label = "BComAndCap";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -198,7 +198,7 @@
                 ; 
         };
 
-        bcomyou: bcomyoucap {
+        bcomyoucap: bcomyoucap {
             label = "BComYouCap";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
