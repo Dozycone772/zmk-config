@@ -1,6 +1,6 @@
 /*Ryan's Dev List
     Common word combos
-    Add here
+    Use home row combos for enter, etc.? Will probably end up with false positives
  */
 
 #include <behaviors.dtsi>
@@ -209,7 +209,7 @@
 
             combo_BComYou {
             timeout-ms = <200>;
-            key-positions = <9 31>;
+            key-positions = <8 31>;
             layers = ALL_LAYERS; 
             bindings = <&bcomyou>;
         };  
