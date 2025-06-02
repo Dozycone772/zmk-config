@@ -214,6 +214,27 @@
             bindings = <&macro_tap &kp Y &kp O &kp U>;
         };  
 
+            combo_BComTheCap {
+            timeout-ms = <200>;
+            key-positions = <13 16 31>;
+            layers = ALL_LAYERS; 
+            bindings = <&macro_tap &kp LS(T) &kp H &kp E>;
+        };  
+
+            combo_BComAndCap {
+            timeout-ms = <200>;
+            key-positions = <10 16 31>;
+            layers = ALL_LAYERS; 
+            bindings = <&macro_tap &kp LS(A) &kp N &kp D>;
+        };  
+
+            combo_BComYouCap {
+            timeout-ms = <200>;
+            key-positions = <8 13 31>;
+            layers = ALL_LAYERS; 
+            bindings = <&macro_tap &kp LS(Y) &kp O &kp U>;
+        };  
+
             combo_BSPC {
             timeout-ms = <200>;
             key-positions = <12 31>;
