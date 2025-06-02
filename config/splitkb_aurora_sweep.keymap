@@ -197,21 +197,21 @@
             timeout-ms = <200>;
             key-positions = <13 31>;
             layers = ALL_LAYERS; 
-            bindings = <&macro_tap &kp T &kp H &kp E>;
+            bindings = <&bcomthe>;
         };  
 
             combo_BComAnd {
             timeout-ms = <200>;
             key-positions = <10 31>;
             layers = ALL_LAYERS; 
-            bindings = <&macro_tap &kp A &kp N &kp D>;
+            bindings = <&bcomand>;
         };  
 
             combo_BComYou {
             timeout-ms = <200>;
             key-positions = <8 31>;
             layers = ALL_LAYERS; 
-            bindings = <&macro_tap &kp Y &kp O &kp U>;
+            bindings = <&bcomyou>;
         };  
 
             combo_BComTheCap {
