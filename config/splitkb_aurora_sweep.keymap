@@ -54,8 +54,8 @@
         lh_hrms: left_positional_hold_tap_strong {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <105>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <400>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 32 33>;
             hold-trigger-on-release;
@@ -407,7 +407,7 @@
         default_layer {
             bindings = <
                 &kp Q               &pht LC(W) W        &pht LC(F) F        &kp P               &pht LC(B) B                                               &pht LC(J) J        &pht LC(L) L     &pht LC(U) U           &pht LC(Y) Y        &pht LS(SQT) SQT
-                &lh_hrmp LGUI A     &lh_hrmr LALT R     &lh_hrmm LCTRL S    &kp T               &pht LC(G) G                                               &kp M               &kp N            &rh_hrmm RCTRL E       &pht LC(I) I        &pht LC(O) O
+                &lh_hrmp LGUI A     &lh_hrmr LALT R     &lh_hrmm LCTRL S    &lh_hrms LSHFT T    &pht LC(G) G                                               &kp M               &kp N            &rh_hrmm RCTRL E       &pht LC(I) I        &pht LC(O) O
                 &lh_hrmz LSHFT Z    &pht LC(X) X        &pht LC(C) C        &pht LC(D) D        &pht LC(V) V                                               &pht LC(K) K        &kp H            &pht LS(COMMA) COMMA   &pht LS(DOT) DOT    &rh_hrmqm RSHFT FSLH
                                                                                                 &thb_lr LOWER TAB   &thb_lr MOUSE LC(BSPC)     &kp SPACE   &thb_lr RAISE ENTER 
             >;
