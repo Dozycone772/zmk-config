@@ -397,7 +397,7 @@
             combo_extpowertoggle {
             timeout-ms = <200>;
             key-positions = <10 11 12 13>;
-            layers = <1>;
+            layers = <0>;
             bindings = <&ext_power EP_TOG>;
         };          
 
